@@ -16,15 +16,14 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.blue,
           centerTitle: true,
         ),
-        body: Center(
-          child: Text(
-            "Advance UI & Navgation",
-            style: TextStyle(
-              fontSize: 30,
-            ),
+        body: Column(
+          children: [
+           Image(image: NetworkImage('https://static.vecteezy.com/system/resources/thumbnails/023/030/611/small_2x/artificial-intelligence-ai-business-people-showing-future-technology-photo.jpg')
+           ),
+           
+          ],
+           ),
           ),
-        ),
-      ),
-    );
+        );
   }
 }
