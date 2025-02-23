@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,12 +19,18 @@ class MyApp extends StatelessWidget {
         ),
         body: Column(
           children: [
-           Image(image: NetworkImage('https://static.vecteezy.com/system/resources/thumbnails/023/030/611/small_2x/artificial-intelligence-ai-business-people-showing-future-technology-photo.jpg')
-           ),
-           
+            CachedNetworkImage(
+              imageUrl: "https://static.vecteezy.com/system/resources/thumbnails/023/030/611/small_2x/artificial-intelligence-ai-business-people-showing-future-technology-photo.jpg",
+              placeholder: (context, url) => CircularProgressIndicator(),
+              errorWidget: (context, url, error) => Icon(Icons.error),
+            ),
+            Image(
+                image: NetworkImage(
+                    'https://img.freepik.com/premium-photo/abstract-surreal-sand-dune-landscape-backgrounds-nature-art-concept-digital-art-illustration-generative-ai_10307-3112.jpg')
+                    ),
           ],
-           ),
-          ),
-        );
+        ),
+      ),
+    );
   }
 }
