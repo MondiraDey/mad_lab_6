@@ -24,6 +24,11 @@ class MyApp extends StatelessWidget {
               placeholder: (context, url) => CircularProgressIndicator(),
               errorWidget: (context, url, error) => Icon(Icons.error),
             ),
+            CachedNetworkImage(
+              imageUrl: "https://images4.alphacoders.com/135/1355023.jpeg",
+              placeholder: (context, url) => CircularProgressIndicator(),
+              errorWidget: (context, url, error) => Icon(Icons.error),
+            ),
             Image(
                 image: NetworkImage(
                     'https://img.freepik.com/premium-photo/abstract-surreal-sand-dune-landscape-backgrounds-nature-art-concept-digital-art-illustration-generative-ai_10307-3112.jpg')
